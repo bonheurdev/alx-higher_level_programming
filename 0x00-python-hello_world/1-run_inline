@@ -1,0 +1,2 @@
+#!/bin/bash
+python3 -c "$PYCODE" # The -c option allows you to provide a command or script directly as a string.
