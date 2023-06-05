@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 number = 98
-print(number, f"Battery street")  # use use f-strings well
+print(f"{number} Battery street")  # use use f-strings well
