@@ -9,5 +9,5 @@ def uppercase(str):
             var2 = chr(var1 - 32)
         else:
             var2 = chr(var1)
-        print(var2, end="")
+        print("{}".format(var2), end="")
     print()
