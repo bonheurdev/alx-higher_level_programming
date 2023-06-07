@@ -8,4 +8,4 @@ def uppercase(str):
         if (var1 >= 97) and (var1 <= 122):      
             var2 = chr(var1 - 32)
         print("{}".format(var2), end="")
-    print()
+    print("")
