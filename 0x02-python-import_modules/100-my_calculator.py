@@ -9,6 +9,7 @@ if __name__ == "__main__":
 
     if num_args != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+        sys.exit(1)
     else:
         a = int(sys.argv[1])
         operator = sys.argv[2]
@@ -28,3 +29,4 @@ if __name__ == "__main__":
             print("{} / {} = {}".format(a, b, result))
         else:
             print("Unknown operator. Available operators: +, -, * and /")
+            sys.exit(1)
