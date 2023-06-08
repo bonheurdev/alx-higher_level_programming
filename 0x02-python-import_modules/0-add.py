@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 
-add_0 = __import__('add_0')
+if __name__ == "__main__":
 
-a = 1
-b = 2
-var1 = add_0.add(a, b)
+    add_0 = __import__('add_0')
 
-print("{} + {} = {}".format(a, b, var1))
+    a = 1
+    b = 2
+    var1 = add_0.add(a, b)
+
+    print("{} + {} = {}".format(a, b, var1))
