@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""a function  that converts a Roman numeral to an integer"""    
+"""a function  that converts a Roman numeral to an integer"""
 
 
 def roman_to_int(roman_string):
@@ -14,7 +14,7 @@ def roman_to_int(roman_string):
         'LX': 60, 'LXX': 70, 'LXXX': 80, 'XC': 90
     }
     Roman_Hundr = {
-        'C': 100, 'CC': 200, 'CCC': 300, 'CD': 400, 'D': 500,    
+        'C': 100, 'CC': 200, 'CCC': 300, 'CD': 400, 'D': 500,
         'DC': 600, 'DCC': 700, 'DCCC': 800, 'CM': 900
     }
     Roman_Thous = {
