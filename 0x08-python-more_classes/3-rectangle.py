@@ -9,7 +9,7 @@ class Rectangle:
         """Initialize a new Rectangle.
 
         Args:
-            width (int): The width of the new rectangle.  
+            width (int): The width of the new rectangle.
             height (int): The height of the new rectangle.
         """
         self.__height = height
@@ -23,9 +23,9 @@ class Rectangle:
     @width.setter
     def width(self, value):
         if not isinstance(value, int):
-            raise TypeError('width must be an integer')   
+            raise TypeError('width must be an integer')
         if value < 0:
-            raise ValueError("width must be >= 0")        
+            raise ValueError("width must be >= 0")
         self.__width = value
 
     @property
@@ -50,6 +50,7 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return (0)
         return ((self.__width * 2) + (self.__height * 2))
+        
     def __str__(self):
         """method to return a string representation of the object
         with character #
