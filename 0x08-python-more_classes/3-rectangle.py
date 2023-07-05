@@ -57,7 +57,7 @@ class Rectangle:
         """
         if self.__width == 0 or self.__height == 0:
             return ""
-        rect_str = ""
+        rectangle_lines = []
         for _ in range(self.__height):
-            rect_str += "#" * self.__width + "\n"
-        return rect_str
+            rectangle_lines.append("#" * self.__width)
+        return "\n".join(rectangle_lines)
