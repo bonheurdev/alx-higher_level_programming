@@ -58,6 +58,6 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ""
         rectangle_lines = []
-        for _ in range(self.__height):
+        for n in range(self.__height):
             rectangle_lines.append("#" * self.__width)
         return "\n".join(rectangle_lines)
