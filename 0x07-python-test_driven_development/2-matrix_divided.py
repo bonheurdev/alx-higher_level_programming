@@ -1,35 +1,37 @@
-# 2-matrix_divided.txt
+#!/usr/bin/python3
+"""
+define a funtion which divides all elements of matrix
+"""
 
-==============================
-How to Use 2-matrix_divided.py
-==============================
 
-This module defines a matrix division function ``matrix_divided(matrix, div)``.
+def matrix_divided(matrix, div):
+    """
+    divide all element of a matrix
+    Args:
+        matrix (list): A list of lists of ints or floats.
+        div (int/float): The divisor
+    Raises:
+        TypeError: If the matrix contains non-numbers.
+        or If the matrix contains rows of different sizes.
+        or If div is not an int or float.
+        ZeroDivisionError: If div is 0.
+    Return:
+        A new matrix of the result of the division.
+    """
+    if (not isinstance(matrix, list) or matrix == [] or
+            not all(isinstance(row, list) for row in matrix) or
+            not all((isinstance(i, int) or isinstance(i, float))
+                    for i in [num for row in matrix for num in row])):
+        raise TypeError("matrix must be a matrix (list of lists) of "
+                        "integers/floats")
 
-Usage
-=====
+    if not all(len(row) == len(matrix[0]) for row in matrix):
+        raise TypeError("Each row of the matrix must have the same size")
 
-``matrix_divided(...)`` returns a copy matrix of the parameter
-``matrix`` with all elements divided by ``div``.
+    if not isinstance(div, int) and not isinstance(div, float):
+        raise TypeError("div must be a number")
 
-::
+    if div == 0:
+        raise ZeroDivisionError("division by zero")
 
-    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
-    >>> matrix = [
-    ...     [3, 6, 9],
-    ...     [12, 15, 18]
-    ... ]
-    >>> print(matrix_divided(matrix, 3))
-    [[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
-
-quotients are rounded to a maximum of two decimal places.
-
-::
-
-    >>> matrix = [
-    ...     [1, 2, 3],
-    ...     [4, 5, 6]
-    ... ]
-    >>> print(matrix_divided(matrix, 3))
-    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
-      
+    return ([list(map(lambda x: round(x / div, 2), row)) for row in matrix])
