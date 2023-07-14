@@ -4,13 +4,13 @@
 Test for 1-my_list.py
 ===========================
 
-case 0: import
+case 0: import module
 >>> MyList = __import__('1-my_list').MyList
 >>>
 
 ::
 
-case 1: common case
+case 1: first case
 
 >>> my_list = MyList()
 >>> my_list.append(1)
@@ -39,7 +39,7 @@ NameError: name 'my_list2' is not defined
 
 ::
 
-case 3: passed a list
+case 3: when passed a list
 
 >>> a = [1, 9, 4]
 >>> my_list = MyList(a)
