@@ -99,6 +99,15 @@ class Rectangle(Base):
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - \
 {self.__width}/{self.__height}"
 
+    def to_dictionary(self):
+        """Returns the dictionary representation of a Rectangle"""
+
+        obj_dictionary = {'id': self.id, 'width': self.__width,
+                          'height': self.__height, 'x': self.__x,
+                          'y': self.__y}
+
+        return obj_dictionary
+
     def update(self, *args, **kwargs):
         """For assigning  an argument to each attribute"""
 
@@ -135,12 +144,3 @@ class Rectangle(Base):
                     self.x = v
                 elif k == "y":
                     self.y = v
-
-    def to_dictionary(self):
-        """Returns the dictionary representation of a Rectangle"""
-
-        obj_dictionary = {'id': self.id, 'width': self.__width,
-                          'height': self.__height, 'x': self.__x,
-                          'y': self.__y}
-
-        return obj_dictionary
