@@ -4,7 +4,7 @@
 import json
 import csv
 import turtle
-import tkinter as tk
+import tkinter
 
 
 class Base:
